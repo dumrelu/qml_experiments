@@ -7,7 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
 
+enable_testing()
+
 add_subdirectory(my_module/)
+add_subdirectory(test/)
 
 qt_add_executable(appExperimentQtQuickTesting
     main.cpp
