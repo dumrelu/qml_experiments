@@ -14,6 +14,8 @@ Item {
     }
 
     TestCase {
+        id: testCase
+
         name: "MyButton"
         when: windowShown
 
@@ -23,5 +25,9 @@ Item {
             const widthAfterClick = myButton.width;
             verify(widthBeforeClick < widthAfterClick);
         }
+
+        function benchmark_create_component() {
+                createTemporaryQmlObject("import my_module; MyTestButton {}", testCase);
+            }
     }
 }

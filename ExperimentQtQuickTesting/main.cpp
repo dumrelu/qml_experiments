@@ -3,6 +3,9 @@
 
 #include <QDirIterator>
 
+#include <QtPlugin>
+Q_IMPORT_PLUGIN(MyPlugin)
+
 
 int main(int argc, char *argv[])
 {
